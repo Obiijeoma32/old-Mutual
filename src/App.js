@@ -27,6 +27,7 @@ import ClaimReports from "./Components/Reports/ClaimReports";
 import SetNewPassword from "./Components/SetNewPassword";
 import BrokerProfile from "./Components/BrokerProfile";
 import "./App.css";
+import IndividualGetQuote from "./Components/Get a Quote/IndividualGetQuote";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/policyreport" element={<PolicyReports />} />
           <Route path="/claimreport" element={<ClaimReports />} />
           <Route path="/brokerprofile" element={<BrokerProfile />} />
+          <Route path="/individualgetquote" element={<IndividualGetQuote />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -15,7 +15,8 @@ function PaymentDashboard() {
   return (
     <>
       <SideMenu />
-      <div className=" sm:pl-[30px] lg:pl-[23rem] h-[150vh]   w-[100%]">
+      {/* LARGE SCREENS */}
+      <div className=" mobile:hidden lg:block pl-[22rem] h-fit pb-[50px]   w-[100%]">
         {/* notification container */}
         <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
           <div className=" justify-between flex items-center">
@@ -193,8 +194,183 @@ function PaymentDashboard() {
           <h3 className="text-[#009677] font-semibold ">OldMutual Broker Platform © -{time}Nubeero</h3>
         </div>
       </div>
+      {/* SMALL SCREENS */}
+      <div className=" mobile:flex h-fit pb-[50px] lg:hidden flex w-full justify-center items-center ">
+        <div className="w-[85%] flex flex-col justify-between   ">
+          <div className="flex w-full   h-[50px] pt-[40px] justify-center items-center">
+            <div className=" justify-between w-full flex items-center">
+              <div className="flex w-[50px]  justify-between items-center">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.10831 12.8078C1.9311 13.9695 2.72338 14.7758 3.69342 15.1777C7.41238 16.7183 12.5877 16.7183 16.3066 15.1777C17.2767 14.7758 18.069 13.9695 17.8918 12.8078C17.7829 12.0939 17.2444 11.4994 16.8454 10.9189C16.3228 10.1493 16.2709 9.30967 16.2708 8.4165C16.2708 4.96472 13.4633 2.1665 10 2.1665C6.53682 2.1665 3.72932 4.96472 3.72932 8.4165C3.72923 9.30967 3.67731 10.1493 3.15472 10.9189C2.75574 11.4994 2.21722 12.0939 2.10831 12.8078Z"
+                    stroke="#333333"
+                    strokeWidth="1.25"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M6.66663 16.3335C7.0487 17.7712 8.39621 18.8335 9.99996 18.8335C11.6037 18.8335 12.9512 17.7712 13.3333 16.3335" stroke="#333333" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+
+                <div className="w-[24px] h-[24px] rounded-[30px] bg-[#50B848] flex justify-center items-center text-center ">
+                  <h3 className=" text-[#fff] text-[10px] ">1</h3>
+                </div>
+              </div>
+              <div
+                onClick={() => setIsOpen(!isOpen)}
+                className={isOpen ? "flex w-[150px] bg-[#D1D7E1] h-[40px]  rounded-[20px] pl-[13px] cursor-pointer ml-[10px] justify-between items-center" : "flex w-[170px] cursor-pointer ml-[23.5px] justify-between items-center"}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className=" opacity-[1] text-[16px] pr-[24px] font-semibold text-[#1a1a1a] ">Valentine</h3>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#808285" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-[40px]">
+            <h3 className="text-[16px] font-medium text-[#808285] opacicty-[1] tracking-[0.26px] ">
+              Dashboard /<span className="text-[20px] text-[#009677] tracking-[0.32px] "> Payments & Cards</span>
+            </h3>
+          </div>
+          <div className=" mt-[40px]">
+            <div className="text-left">
+              <h3 className="text-[28px] font-[600] text-[#1a1a1a] tracking-[0.56px]  ">Payments & Cards</h3>
+              <p className="text-[14px] font-normal mt-[8px] text-[#1A1A1A] ">Payments Dashboard</p>
+            </div>
+          </div>
+          <div className=" w-full h-fit py-[50px] px-[35px] rounded-[8px] mt-[44px] bg-white ">
+            {/* Boxes */}
+            <div className="flex gap-[40px] justify-between flex-wrap items-center">
+              <div className="transition-transform transform pt-4  scale-110 hover:shadow-lg ring-[#808285] shadow-3xl  flex-col flex justify-center items-center w-[230px] rounded-[12px] opacity-[1] h-[180px] ">
+                <div className="flex w-full p-5 justify-between ">
+                  <div className="w-[50%] grid items-start ">
+                    <h2 className=" font-medium text-[20px] text-[#002A80] mb-3 ">Paystack</h2>
+                    <h3 className=" font-semibold text-[24px] text-[#171717] ">₦0.00</h3>
+                    <img className=" h-[70px]" src={paystack} alt="Paystack logo" />
+                  </div>
+                  <div>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 4.5H19" stroke="#0CA5DB" strokeWidth="3" strokeLinejoin="round" />
+                      <path d="M4 14.5H19" stroke="#0CA5DB" strokeWidth="3" strokeLinejoin="round" />
+                      <path d="M4 9.5H20" stroke="#0CA5DB" strokeWidth="3" strokeLinejoin="round" />
+                      <path d="M4 19.5H12" stroke="#0CA5DB" strokeWidth="3" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div className="transition-transform transform pt-4 scale-110 hover:shadow-lg ring-[#808285] shadow-3xl  flex-col flex justify-center items-center w-[230px] rounded-[12px] opacity-[1] h-[180px] ">
+                <div className="flex w-full p-5 justify-between ">
+                  <div className="w-[50%] grid items-start ">
+                    <h2 className=" font-medium text-[20px] text-[#002A80] mb-3 ">Wallet</h2>
+                    <h3 className=" font-semibold text-[24px] text-[#171717] ">₦0.00</h3>
+                    <img className="h-[70px]" src={logo} alt="Paystack logo" />
+                  </div>
+                  <div className="w-[35%] h-[32px]">
+                    <img src={oldmutual} alt="Paystack logo" />
+                  </div>
+                </div>
+              </div>
+              <div className="transition-transform transform  scale-110 hover:shadow-lg ring-[#808285] shadow-3xl pt-4 w-[230px] px-2 rounded-[12px] opacity-[1] h-[180px] ">
+                <div className="flex  w-full px-2 items-center justify-between ">
+                  <div className="w-[50%]  ">
+                    <h2 className=" font-medium text-[20px] whitespace-nowrap text-[#002A80] mb-3 ">Credit Note</h2>
+                  </div>
+                  <div className="w-[35%] h-[32px]">
+                    <img src={oldmutual} alt="Paystack logo" />
+                  </div>
+                </div>
+              </div>
+              <div className="transition-transform transform pt-2  scale-110 hover:shadow-lg ring-[#808285] shadow-3xl   w-[230px] rounded-[12px] opacity-[1] h-[180px] ">
+                <div className="flex w-full p-5 justify-between ">
+                  <div className="w-[50%] grid items-start ">
+                    <h2 className=" font-medium text-[20px] text-[#002A80] mb-3 whitespace-nowrap ">Add Card</h2>
+
+                    <img className="h-[70px]" src={logo} alt="Paystack logo" />
+                  </div>
+                  <div className=" w-[30%] relative top-[5.5rem] ">
+                    <img src={card} alt="card" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className=" flex justify-between items-center mt-[3rem] ">
+              <h3 className=" font-semibold text-[20px] text-[#171717] ">Payments History</h3>
+              <div className="flex justify-between w-[190px] items-center">
+                <div
+                  onClick={() => {
+                    setAll(!all);
+                    setHistory(false);
+                  }}
+                  className={`w-[70px] cursor-pointer h-[40px]  text-[#171717] flex justify-center items-center border-[2px] border-[#CBD2DD] rounded-[7px] ${all ? "bg-[#CBD2DD]" : "bg-[#F1F2F5]"} `}
+                >
+                  <h3 className="text-[16px] font-medium  opacicty-[1] tracking-[0.26px] ">All</h3>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" fill="currentColor" />
+                  </svg>
+                </div>
+                <div
+                  onClick={() => {
+                    setHistory(!history);
+                    setAll(false);
+                  }}
+                  className={`w-[110px] cursor-pointer h-[40px]  text-[#171717] flex justify-center items-center border-[2px] border-[#CBD2DD] rounded-[7px] ${history ? "bg-[#CBD2DD]" : "bg-[#F1F2F5]"} `}
+                >
+                  <h3 className="text-[16px] font-medium  opacicty-[1] tracking-[0.26px] ">History</h3>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="  w-full border-t-[1px] border-t-[#E4E7ED] rounded mt-[40px] ">
+              <div className=" p-[30px] w-full mt-[40px] bg-[#F6F7F9] h-[100px] ">
+                <div className=" w-full divide-x border-[1px] bg-white flex justify-between items-center border-[#D4DAE3] h-[45px] rounded ">
+                  <input className=" bg-transparent outline-none pl-[20px] text-[#6E777F] font-normal text-[16px] h-full w-[92%] " type="text" placeholder="Search Payments.." />
+                  <div className=" h-full w-[8%] text-[#212529] flex items-center justify-center  bg-[#F6F7F9]">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.1328 13.4096L18.4698 17.7336M15.9698 8.98364C15.9698 12.4354 13.1716 15.2336 9.71985 15.2336C6.26807 15.2336 3.46985 12.4354 3.46985 8.98364C3.46985 5.53186 6.26807 2.73364 9.71985 2.73364C13.1716 2.73364 15.9698 5.53186 15.9698 8.98364Z"
+                        stroke="currentcolor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full whitespace-nowrap gap-[30px] overflow-y-hidden overflow-x-scroll bg-[#F1F2F2] h-[60px] font-medium text-[15px] text-[#575757] items-center flex justify-between p-[30px] mt-[30px] ">
+              <h3>Payment Ref</h3>
+              <h3>Status</h3>
+              <h3> Submitted</h3>
+              <h3> Product</h3>
+              <h3> Customer</h3>
+              <h3> Value</h3>
+            </div>
+            <div className=" flex mt-[40px] justify-end items-end ">
+              <div className="w-[140px] bg-[#F1F2F5] rounded-[5px] text-[#171717] text-[15px] flex items-center justify-evenly  h-[40px]">
+                <div className=" bg-[#E5E7ED] w-[35px] text-center justify-center items-center flex h-full ">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.1947 5.93146L9.02808 10.0981L13.1947 14.2648" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+
+                <h3 className=" bg-[#3F9CE8] w-[35px] text-center justify-center items-center flex h-full ">1</h3>
+                <h3 className=" bg-transparent w-[35px] text-center justify-center items-center flex h-full ">2</h3>
+                <div className=" bg-[#E5E7ED] w-[35px] text-center justify-center items-center flex h-full ">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.19478 5.93146L12.3615 10.0981L8.19478 14.2648" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {all && (
-        <div className=" flex py-[15px] justify-center items-center absolute left-[69.5%] top-[50.5rem] bg-white border-[#F8F9FA] w-[190px] border-[2px] h-[320px] rounded ">
+        <div className=" flex py-[15px]  mobile:right-[14%] md:top-[51rem] mobile:top-[78.5rem] justify-center items-center absolute  lg:left-[69.5%] lg:top-[50.5rem] bg-white border-[#F8F9FA] w-[190px] border-[2px] h-[320px] rounded ">
           <div className=" flex flex-col text-left h-full  w-[90%] justify-between">
             <section className=" flex items-center  w-full h-[50px] px-[23px] rounded place-content-center hover:bg-[#F1F2F5] justify-between ">
               <svg className="animate-spin" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,7 +442,7 @@ function PaymentDashboard() {
         </div>
       )}
       {history && (
-        <div className=" flex py-[15px] justify-center items-center absolute left-[78.8%] top-[50.5rem] bg-white border-[#F8F9FA] w-[190px] border-[2px] h-[300px] rounded ">
+        <div className=" flex py-[15px]  mobile:right-[7%] md:top-[51rem] mobile:top-[78.5rem] justify-center items-center absolute  lg:left-[79%] lg:top-[50.5rem] bg-white border-[#F8F9FA] w-[190px] border-[2px] h-[300px] rounded ">
           <div className=" flex flex-col text-left text-[#575757] h-full  w-[90%] justify-between">
             <section className=" flex items-center  w-full h-[50px] px-[20px] rounded place-content-center hover:bg-[#F1F2F5] justify-between ">
               <svg width="25" height="25" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
