@@ -8,7 +8,6 @@ import FourthIcon from "../QuickQuoteModal/FourthIcon";
 import FifthIcon from "../QuickQuoteModal/FifthIcon";
 import DropDown from "../ProfileDropdown/DropDown";
 import GetQuoteSelect from "../Select Inputs/GetQuoteSelect";
-
 export default function IndividualGetQuote() {
   const [isOpen, setIsOpen] = useState(false);
   const [quickquotes, setQuickQuotes] = useState(false);
@@ -17,6 +16,11 @@ export default function IndividualGetQuote() {
   const [thirdIcon, setThirdIcon] = useState(false);
   const [fourthIcon, setFourthIcon] = useState(false);
   const [fifthIcon, setFifthIcon] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
 
   // const [selectedOption, setSelectedOption] = useState(null);
   const motorInsurance = () => {
@@ -130,10 +134,35 @@ export default function IndividualGetQuote() {
     { label: "Zamfara", value: "zamfara" },
     { label: "Federal Capital Territory (FCT)", value: "fct" },
   ];
+  const loanTerm = [
+    { label: 0, value: 0 },
+    { label: 12, value: 12 },
+    { label: 24, value: 24 },
+    { label: 36, value: 36 },
+    { label: 48, value: 48 },
+    { label: 60, value: 60 },
+    { label: 72, value: 72 },
+  ];
+  const loanType = [
+    { label: "PERSONAL LOAN", value: "PERSONAL LOAN" },
+    { label: "SME LOAN", value: "SME LOAN" },
+    { label: "MORTGAGE LOAN", value: "MORTGAGE LOAN" },
+    { label: "TERM LOAN", value: "TERM LOAN" },
+    { label: "GROUP LIFE LOAN", value: "GROUP LIFE LOAN" },
+  ];
+  const medicalHistory = [
+    { label: "Ailment", value: "Ailment" },
+    { label: "Regular CheckUp", value: "Regular CheckUp" },
+    { label: "Treatment", value: "Treatment" },
+    { label: "Surgery", value: "Surgery" },
+    { label: "Others", value: "Others" },
+  ];
+
   return (
     <>
       <SideMenu />
-      <div className=" sm:pl-[30px] lg:pl-[23rem] h-[150vh]   w-[100%]">
+      {/* LARGE SCREENS */}
+      <div className=" lg:block mobile:hidden pl-[22rem]  h-fit pb-[50px]   w-full">
         {/* notification container */}
         <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
           <div className=" justify-between flex items-center">
@@ -196,8 +225,225 @@ export default function IndividualGetQuote() {
               <h3>Loan Applicant Details</h3>
             </div>
           </div>
-          <form className=" mt-6 w-[95%] ">
-            <div className="flex items-center justify-between">
+          <form className=" flex flex-wrap items-center gap-[30px] mt-6 w-[95%] ">
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">First Name</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Last Name</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <GetQuoteSelect placeholder={`Title`} label={title} />
+
+            <GetQuoteSelect placeholder={`Marital Status`} label={maritalStatus} />
+            <GetQuoteSelect placeholder={`Gender`} label={gender} />
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Date of Birth</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">ID Number</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="number" />
+            </div>
+            <GetQuoteSelect placeholder={`ID Type`} label={idType} />
+            <GetQuoteSelect placeholder={`Nationality`} label={country} />
+
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Employer</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Occupation</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Income Source</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+          </form>
+          {/* Title Residential Information */}
+          <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+            <div className="  text-[#171717] text-[20px] font-semibold ">
+              <h3>Residential Information</h3>
+            </div>
+          </div>
+          <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[350px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Address 1</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[350px] flex flex-col justify-between h-[60px] ">
+              <label htmlFor="">Address 2</label>
+              <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+            </div>
+            <GetQuoteSelect placeholder={`City`} label={idType} />
+            <GetQuoteSelect placeholder={`Nationality`} label={country} />
+            <GetQuoteSelect placeholder={`State`} label={state} />
+          </form>
+          {/* Title Loan Information */}
+          <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+            <div className="  text-[#171717] text-[20px] font-semibold ">
+              <h3>Loan Information</h3>
+            </div>
+          </div>
+          <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+            <section>
+              <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+              <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                <label htmlFor="">Loan Amount</label>
+                <input className=" outline-none w-full h-2/4 bg-none" type="number" />
+              </div>
+            </section>
+            <GetQuoteSelect placeholder={`Loan Term`} label={loanTerm} />
+            <GetQuoteSelect placeholder={`Loan Type`} label={loanType} />
+          </form>
+          {/* Title Medical Information */}
+          <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+            <div className="  text-[#171717] text-[20px] font-semibold ">
+              <h3>Medical Information</h3>
+            </div>
+          </div>
+          <div>
+            <label htmlFor="toggle" className="flex gap-3 mt-6 items-center cursor-pointer">
+              <div className="relative ">
+                {/* Hidden input */}
+                <input type="checkbox" id="toggle" className="sr-only" checked={isChecked} onChange={handleToggle} />
+                {/* Visual switch */}
+                <div className={`block  w-10 h-6 rounded-full ${isChecked ? "bg-[#9CCD65]" : "bg-[#EEEEEE]"}`} />
+                {/* Switch ball */}
+                <div className={`absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform transform ${isChecked ? "translate-x-full " : "translate-x-0 "}`} />
+              </div>{" "}
+              Medical History Available?
+            </label>
+            <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+              {isChecked && (
+                <>
+                  <GetQuoteSelect placeholder={`Medical History`} label={medicalHistory} />
+                  <section>
+                    <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                    <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                      <label htmlFor="">Name of Practioner</label>
+                      <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                    </div>
+                  </section>{" "}
+                  <section>
+                    <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                    <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                      <label htmlFor="">Phone</label>
+                      <input className=" outline-none w-full h-2/4 bg-none" type="number" />
+                    </div>
+                  </section>
+                  <div className="w-[100%] ">
+                    <textarea className=" px-3 border-solid border-[0.5px] border-[#9C9898] h-[130px] text-[#cccccc] pb-[10px] pt-[4px] rounded w-full  ">Description</textarea>
+                  </div>
+                  <section>
+                    <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                    <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                      <label htmlFor="">Address 1</label>
+                      <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                    </div>
+                  </section>{" "}
+                  <section>
+                    <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                    <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                      <label htmlFor="">Address 2</label>
+                      <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                    </div>
+                  </section>{" "}
+                  <GetQuoteSelect placeholder={`City`} label={idType} />
+                  <GetQuoteSelect placeholder={`Town`} label={state} />
+                  <GetQuoteSelect placeholder={`State`} label={state} />
+                  <section>
+                    <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                    <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                      <label htmlFor="">Duration</label>
+                      <input className=" outline-none w-full h-2/4 bg-none" type="text" placeholder="Months" />
+                    </div>
+                  </section>
+                </>
+              )}
+            </form>
+          </div>
+          <button className=" mt-[40px]">
+            <div className="w-[240px] flex justify-center items-center opacity-[1] h-[42px] rounded-[4px] bg-[#50B848] ">
+              <p className=" text-[18px] opacity-[1] text-center font-normal flex justify-center items-center text-[#fff] tracking-[0.51px] ">
+                <span className=" mr-[10px] ">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" strokeWidth="1.5" />
+                    <path d="M8 12.5L10.5 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                {"  "}Submit Quote
+              </p>
+            </div>
+          </button>
+        </div>
+      </div>
+      {/* SMALL SCREENS */}
+      <div className=" mobile:flex h-fit pb-[50px] lg:hidden flex w-full justify-center items-center ">
+        <div className="w-[85%] flex flex-col justify-between   ">
+          <div className="flex w-full   h-[50px] pt-[40px] justify-center items-center">
+            <div className=" justify-between w-full flex items-center">
+              <div className="flex w-[50px]  justify-between items-center">
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.10831 12.8078C1.9311 13.9695 2.72338 14.7758 3.69342 15.1777C7.41238 16.7183 12.5877 16.7183 16.3066 15.1777C17.2767 14.7758 18.069 13.9695 17.8918 12.8078C17.7829 12.0939 17.2444 11.4994 16.8454 10.9189C16.3228 10.1493 16.2709 9.30967 16.2708 8.4165C16.2708 4.96472 13.4633 2.1665 10 2.1665C6.53682 2.1665 3.72932 4.96472 3.72932 8.4165C3.72923 9.30967 3.67731 10.1493 3.15472 10.9189C2.75574 11.4994 2.21722 12.0939 2.10831 12.8078Z"
+                    stroke="#333333"
+                    strokeWidth="1.25"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path d="M6.66663 16.3335C7.0487 17.7712 8.39621 18.8335 9.99996 18.8335C11.6037 18.8335 12.9512 17.7712 13.3333 16.3335" stroke="#333333" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+
+                <div className="w-[24px] h-[24px] rounded-[30px] bg-[#50B848] flex justify-center items-center text-center ">
+                  <h3 className=" text-[#fff] text-[10px] ">1</h3>
+                </div>
+              </div>
+              <div
+                onClick={() => setIsOpen(!isOpen)}
+                className={isOpen ? "flex w-[150px] bg-[#D1D7E1] h-[40px]  rounded-[20px] pl-[13px] cursor-pointer ml-[10px] justify-between items-center" : "flex w-[170px] cursor-pointer ml-[23.5px] justify-between items-center"}
+              >
+                <div className="flex justify-between items-center">
+                  <h3 className=" opacity-[1] text-[16px] pr-[24px] font-semibold text-[#1a1a1a] ">Valentine</h3>
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9" stroke="#808285" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-[40px]">
+            <h3 className="text-[16px] font-medium text-[#808285] opacicty-[1] tracking-[0.26px] ">
+              Dashboard /<Link to="/creditLife">/ Credit Life Insurance/</Link>
+              <span className="text-[20px] text-[#009677] tracking-[0.32px] ">Get Quote</span>
+            </h3>
+          </div>
+          <div className=" mt-[40px]">
+            <div className="text-left">
+              <h3 className="text-[28px] font-[600] text-[#1a1a1a] tracking-[0.56px]  ">Credit Life Individual</h3>
+              <p className="text-[14px] font-normal mt-[8px] text-[#1A1A1A] ">Fill in Applicant Information</p>
+            </div>
+          </div>
+          <button className=" mt-[40px]" onClick={() => setQuickQuotes(true)}>
+            <div className="w-[240px] flex justify-center items-center opacity-[1] h-[42px] rounded-[4px] bg-[#50B848] ">
+              <p className=" text-[18px] opacity-[1] text-center font-normal flex justify-center items-center text-[#fff] tracking-[0.51px] ">
+                <span className="text-[20px] ">
+                  <b className=" font-bold mr-1 text-[30px] ">+</b>
+                </span>
+                {"  "}Quick Quotes
+              </p>
+            </div>
+          </button>
+          <div className=" w-[95%] h-fit pb-[40px] pl-[25px] pt-[37px] rounded-[8px] mt-[34px] bg-white ">
+            {/* Title */}
+            <div className=" w-[90%] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+              <div className="  text-[#171717] text-[20px] font-semibold ">
+                <h3>Loan Applicant Details</h3>
+              </div>
+            </div>
+            <form className=" flex flex-wrap items-center gap-[30px] mt-6 w-full ">
               <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">First Name</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
@@ -207,24 +453,20 @@ export default function IndividualGetQuote() {
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
               </div>
               <GetQuoteSelect placeholder={`Title`} label={title} />
-            </div>
-            <div className="flex mt-7 items-center justify-between">
+
               <GetQuoteSelect placeholder={`Marital Status`} label={maritalStatus} />
               <GetQuoteSelect placeholder={`Gender`} label={gender} />
               <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">Date of Birth</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
               </div>
-            </div>
-            <div className="flex mt-7 items-center justify-between">
               <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">ID Number</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="number" />
               </div>
               <GetQuoteSelect placeholder={`ID Type`} label={idType} />
               <GetQuoteSelect placeholder={`Nationality`} label={country} />
-            </div>
-            <div className="flex mt-7 items-center justify-between">
+
               <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[250px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">Employer</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
@@ -237,31 +479,124 @@ export default function IndividualGetQuote() {
                 <label htmlFor="">Income Source</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
               </div>
+            </form>
+            {/* Title Residential Information */}
+            <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+              <div className="  text-[#171717] text-[20px] font-semibold ">
+                <h3>Residential Information</h3>
+              </div>
             </div>
-          </form>
-          {/* Title Residential Information */}
-          <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
-            <div className="  text-[#171717] text-[20px] font-semibold ">
-              <h3>Residential Information</h3>
-            </div>
-          </div>
-          <form className=" mt-6 w-[95%] ">
-            <div className="flex items-center w-full justify-between">
-              <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-5/12 flex flex-col justify-between h-[60px] ">
+            <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+              <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[350px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">Address 1</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
               </div>
-              <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-5/12 flex flex-col justify-between h-[60px] ">
+              <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pt-[5px] pb-[10px]  rounded w-[350px] flex flex-col justify-between h-[60px] ">
                 <label htmlFor="">Address 2</label>
                 <input className=" outline-none w-full h-2/4 bg-none" type="text" />
               </div>
-            </div>
-            <div className="flex mt-7 items-center justify-between">
               <GetQuoteSelect placeholder={`ID Type`} label={idType} />
               <GetQuoteSelect placeholder={`Nationality`} label={country} />
               <GetQuoteSelect placeholder={`State`} label={state} />
+            </form>
+            {/* Title Loan Information */}
+            <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+              <div className="  text-[#171717] text-[20px] font-semibold ">
+                <h3>Loan Information</h3>
+              </div>
             </div>
-          </form>
+            <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+              <section>
+                <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                  <label htmlFor="">Loan Amount</label>
+                  <input className=" outline-none w-full h-2/4 bg-none" type="number" />
+                </div>
+              </section>
+              <GetQuoteSelect placeholder={`Loan Term`} label={loanTerm} />
+              <GetQuoteSelect placeholder={`Loan Type`} label={loanType} />
+            </form>
+            {/* Title Medical Information */}
+            <div className=" w-[90%] mt-[40px] border-b-[1px] border-b-[#E5E7ED] flex justify-start pb-[20px] pl-[20px] items-center ">
+              <div className="  text-[#171717] text-[20px] font-semibold ">
+                <h3>Medical Information</h3>
+              </div>
+            </div>
+            <div>
+              <label htmlFor="toggle" className="flex gap-3 mt-6 items-center cursor-pointer">
+                <div className="relative ">
+                  {/* Hidden input */}
+                  <input type="checkbox" id="toggle" className="sr-only" checked={isChecked} onChange={handleToggle} />
+                  {/* Visual switch */}
+                  <div className={`block  w-10 h-6 rounded-full ${isChecked ? "bg-[#9CCD65]" : "bg-[#EEEEEE]"}`} />
+                  {/* Switch ball */}
+                  <div className={`absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform transform ${isChecked ? "translate-x-full " : "translate-x-0 "}`} />
+                </div>{" "}
+                Medical History Available?
+              </label>
+              <form className=" flex flex-wrap items-center gap-[30px] mt-6  w-[95%] ">
+                {isChecked && (
+                  <>
+                    <GetQuoteSelect placeholder={`Medical History`} label={medicalHistory} />
+                    <section>
+                      <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                      <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                        <label htmlFor="">Name of Practioner</label>
+                        <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                      </div>
+                    </section>{" "}
+                    <section>
+                      <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                      <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                        <label htmlFor="">Phone</label>
+                        <input className=" outline-none w-full h-2/4 bg-none" type="number" />
+                      </div>
+                    </section>
+                    <div className="w-[100%] ">
+                      <textarea className=" px-3 border-solid border-[0.5px] border-[#9C9898] h-[130px] text-[#cccccc] pb-[10px] pt-[4px] rounded w-full  ">Description</textarea>
+                    </div>
+                    <section>
+                      <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                      <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                        <label htmlFor="">Address 1</label>
+                        <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                      </div>
+                    </section>{" "}
+                    <section>
+                      <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                      <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                        <label htmlFor="">Address 2</label>
+                        <input className=" outline-none w-full h-2/4 bg-none" type="text" />
+                      </div>
+                    </section>{" "}
+                    <GetQuoteSelect placeholder={`City`} label={idType} />
+                    <GetQuoteSelect placeholder={`Town`} label={state} />
+                    <GetQuoteSelect placeholder={`State`} label={state} />
+                    <section>
+                      <div className="lg:h-[10px] 3xl:h-[0px]">{/*intentional*/}</div>
+                      <div className=" px-3 border-solid border-[0.5px] border-[#9C9898] text-[#cccccc] pb-[10px] pt-[4px] rounded w-[250px] flex flex-col justify-between h-[52px] ">
+                        <label htmlFor="">Duration</label>
+                        <input className=" outline-none w-full h-2/4 bg-none" type="text" placeholder="Months" />
+                      </div>
+                    </section>
+                  </>
+                )}
+              </form>
+            </div>
+            <button className=" mt-[40px]">
+              <div className="w-[240px] flex justify-center items-center opacity-[1] h-[42px] rounded-[4px] bg-[#50B848] ">
+                <p className=" text-[18px] opacity-[1] text-center font-normal flex justify-center items-center text-[#fff] tracking-[0.51px] ">
+                  <span className=" mr-[10px] ">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" stroke="currentColor" strokeWidth="1.5" />
+                      <path d="M8 12.5L10.5 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  {"  "}Submit Quote
+                </p>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
       {/* Quick Quotes Button */}
