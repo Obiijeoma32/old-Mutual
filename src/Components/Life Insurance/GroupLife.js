@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SideMenu from "../SideMenu";
+import { Link } from "react-router-dom";
 
 export default function GroupLife() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,9 +105,11 @@ export default function GroupLife() {
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">0.0 - 0.5% </td>
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">(Custom)</td>
                     <td className="pl-[10px] pr-[10px]">
-                      <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                        GET A QUOTE
-                      </button>
+                      <Link to="/grouplifecorporategetquote">
+                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                          GET A QUOTE
+                        </button>
+                      </Link>
                     </td>
                   </tr>
                 </tbody>
@@ -204,9 +207,11 @@ export default function GroupLife() {
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">0.0 - 0.5% </td>
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">(Custom)</td>
                       <td className="pl-[10px] pr-[10px]">
-                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                          GET A QUOTE
-                        </button>
+                        <Link to="/grouplifecorporategetquote">
+                          <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                            GET A QUOTE
+                          </button>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>

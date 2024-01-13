@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function CreditLifeCorporate({ setIsHovered }) {
   return (
     <>
@@ -24,9 +26,11 @@ export default function CreditLifeCorporate({ setIsHovered }) {
               <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED] ">0.0% - 0.1% </td>
               <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">(Custom)</td>
               <td className="pl-[10px] pr-[10px]">
-                <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                  GET A QUOTE
-                </button>{" "}
+                <Link to="/corporategetquote">
+                  <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                    GET A QUOTE
+                  </button>{" "}
+                </Link>
               </td>
             </tr>
           </tbody>

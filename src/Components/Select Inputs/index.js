@@ -14,6 +14,7 @@ export default function UsageSelect({ label, placeholder, value, width }) {
             outline: "none",
           }),
         }}
+        width={width}
         value={value}
         options={label}
         placeholder={placeholder}

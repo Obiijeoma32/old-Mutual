@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function CommercialThirdParty() {
   const [isHovered, setIsHovered] = useState(false);
@@ -25,9 +26,11 @@ function CommercialThirdParty() {
               <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">3.0% - 5.0% </td>
               <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">12 Months</td>
               <td className="pl-[10px] pr-[10px]">
-                <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                  GET A QUOTE
-                </button>
+                <Link to="/motorinsuranceprivate">
+                  <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                    GET A QUOTE
+                  </button>
+                </Link>
               </td>
             </tr>
           </tbody>

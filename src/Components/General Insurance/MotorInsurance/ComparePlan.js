@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ComparePlan() {
   const [privateComprehensive, setPrivateComprehensive] = useState(false);
@@ -107,7 +108,9 @@ function ComparePlan() {
                 </tr>
                 <tr className="border-b-[1px] flex justify-center items-center h-[60px]  border-b-[#E4E7ED]">
                   <td className="pl-[15px]">
-                    <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    <Link to="/motorinsuranceprivate">
+                      <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -167,7 +170,9 @@ function ComparePlan() {
                 </tr>
                 <tr className="border-b-[1px] flex justify-center items-center h-[60px]  border-b-[#E4E7ED]">
                   <td className="pl-[15px]">
-                    <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    <Link to="/motorinsuranceprivate">
+                      <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -227,7 +232,9 @@ function ComparePlan() {
                 </tr>
                 <tr className="border-b-[1px] flex justify-center items-center h-[60px]  border-b-[#E4E7ED]">
                   <td className="pl-[15px]">
-                    <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    <Link to="/motorinsuranceprivate">
+                      <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    </Link>
                   </td>
                 </tr>
               </tbody>
@@ -287,7 +294,9 @@ function ComparePlan() {
                 </tr>
                 <tr className="border-b-[1px] flex justify-center items-center h-[60px]  border-b-[#E4E7ED]">
                   <td className="pl-[15px]">
-                    <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    <Link to="/motorinsuranceprivate">
+                      <button className=" w-[100px]  bg-[#0CE454] text-[#fff] text-center h-[40px] rounded-[4px]  ">Get Quote</button>{" "}
+                    </Link>
                   </td>
                 </tr>
               </tbody>

@@ -28,6 +28,9 @@ import SetNewPassword from "./Components/SetNewPassword";
 import BrokerProfile from "./Components/BrokerProfile";
 import "./App.css";
 import IndividualGetQuote from "./Components/Get a Quote/IndividualGetQuote";
+import CorporateGetQuote from "./Components/Get a Quote/CorporateGetQuote";
+import GroupLifeCorporateGetQuote from "./Components/Get a Quote/GroupLifeCorporateGetQuote";
+import MotorInsurancePrivate from "./Components/Get a Quote/MotorInsurancePrivate";
 
 function App() {
   return (
@@ -63,6 +66,9 @@ function App() {
           <Route path="/claimreport" element={<ClaimReports />} />
           <Route path="/brokerprofile" element={<BrokerProfile />} />
           <Route path="/individualgetquote" element={<IndividualGetQuote />} />
+          <Route path="/corporategetquote" element={<CorporateGetQuote />} />
+          <Route path="/grouplifecorporategetquote" element={<GroupLifeCorporateGetQuote />} />
+          <Route path="/motorinsuranceprivate" element={<MotorInsurancePrivate />} />
         </Routes>
       </BrowserRouter>
     </>
