@@ -31,6 +31,8 @@ import IndividualGetQuote from "./Components/Get a Quote/IndividualGetQuote";
 import CorporateGetQuote from "./Components/Get a Quote/CorporateGetQuote";
 import GroupLifeCorporateGetQuote from "./Components/Get a Quote/GroupLifeCorporateGetQuote";
 import MotorInsurancePrivate from "./Components/Get a Quote/MotorInsurancePrivate";
+import MarineCago from "./Components/Get a Quote/MarineCago";
+import FireandSpecialPerilQuote from "./Components/Get a Quote/FireandSpecialPerilQuote";
 
 function App() {
   return (
@@ -69,6 +71,8 @@ function App() {
           <Route path="/corporategetquote" element={<CorporateGetQuote />} />
           <Route path="/grouplifecorporategetquote" element={<GroupLifeCorporateGetQuote />} />
           <Route path="/motorinsuranceprivate" element={<MotorInsurancePrivate />} />
+          <Route path="/marinecargo" element={<MarineCago />} />
+          <Route path="/fireandspecialperilquote" element={<FireandSpecialPerilQuote />} />
         </Routes>
       </BrowserRouter>
     </>

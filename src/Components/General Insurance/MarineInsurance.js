@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SideMenu from "../SideMenu";
 import DropDown from "../ProfileDropdown/DropDown";
+import { Link } from "react-router-dom";
 
 function MarineInsurance() {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,9 +116,11 @@ function MarineInsurance() {
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">0.1 - 1.5% </td>
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">6 Months</td>
                     <td className="pl-[10px] pr-[10px]">
-                      <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                        GET A QUOTE
-                      </button>
+                      <Link to="/marinecargo">
+                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                          GET A QUOTE
+                        </button>
+                      </Link>
                     </td>
                   </tr>
                 </tbody>
@@ -146,9 +149,11 @@ function MarineInsurance() {
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED] ">NGN100,000 - NGN900,000,000 </td>
                     <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">6 Months</td>
                     <td className="pl-[10px] pr-[10px]">
-                      <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                        GET A QUOTE
-                      </button>{" "}
+                      <Link to="/marinecargo">
+                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                          GET A QUOTE
+                        </button>
+                      </Link>
                     </td>
                   </tr>
                 </tbody>
@@ -252,9 +257,11 @@ function MarineInsurance() {
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">0.1 - 1.5% </td>
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">6 Months</td>
                       <td className="pl-[10px] pr-[10px]">
-                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                          GET A QUOTE
-                        </button>
+                        <Link to="/marinecargo">
+                          <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                            GET A QUOTE
+                          </button>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>
@@ -283,9 +290,11 @@ function MarineInsurance() {
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED] ">NGN100,000 - NGN900,000,000 </td>
                       <td className="border-r-[1px] pl-[10px]  border-r-[#E4E7ED]">6 Months</td>
                       <td className="pl-[10px] pr-[10px]">
-                        <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
-                          GET A QUOTE
-                        </button>{" "}
+                        <Link to="/marinecargo">
+                          <button onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className=" w-[90px] border-[1px] border-[#9CCD65] hover:bg-[#9CCD65] text-center h-[60px] rounded-[4px]  ">
+                            GET A QUOTE
+                          </button>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>

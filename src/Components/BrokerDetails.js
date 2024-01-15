@@ -1,22 +1,23 @@
-// import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/logo.png";
 import leaf from "./images/signin.png";
 // import classNames from "classnames";
 
-function BrokerDetails({ steps, currentStep }) {
-  //   const [barWidth, setBarWidth] = useState(0);
-
-  //   const stepWidth = 100 / steps;
-
-  //   const updateProgressBar = () => {
-  //     const newWidth = stepWidth * currentStep;
-  //     setBarWidth(newWidth);
-  //   };
-  //   useEffect(() => {
-  //     updateProgressBar();
-  //   }, [currentStep]);
-
+function BrokerDetails() {
+  const [progress, setProgress] = useState(0);
+  const simulateRegistration = () => {
+    // Simulate registration progress
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => {
+        const newProgress = prevProgress + 10;
+        if (newProgress >= 100) {
+          clearInterval(interval);
+        }
+        return newProgress;
+      });
+    }, 1000);
+  };
   const options = [
     { id: 1, label: " Brokers' Details " },
     { id: 2, label: "Broker's Address" },
@@ -59,6 +60,11 @@ function BrokerDetails({ steps, currentStep }) {
           </div>
           {/* Form starts */}
           <div className=" w-[45%]">
+            {/* Progress Bar */}
+            <div className="flex h-2 mb-4 overflow-hidden text-xs bg-[#009677]">
+              <div style={{ width: `${progress}%` }} className="flex flex-col whitespace-nowrap  justify-center shadow-none" />
+            </div>
+
             {/* <div className="bg-[#009677] ">
             <div className="flex mb-2 items-center justify-between">
               {Array.from({ length: steps }).map((_, index) => (
@@ -94,7 +100,9 @@ function BrokerDetails({ steps, currentStep }) {
 
                 <div className="w-[440px] mt-[43.25px] flex justify-between items-center">
                   <Link onClick={() => window.scroll(0, 0)} to="/">
-                    <button className="w-[204px] h-[52px] text-[#50B848] text-[16px] tracking-[0.26px] font-[600]  border-[1px] border-[#50B848] opacity-[1] rounded-[8px] ">Previous</button>
+                    <button onClick={simulateRegistration} className="w-[204px] h-[52px] text-[#50B848] text-[16px] tracking-[0.26px] font-[600]  border-[1px] border-[#50B848] opacity-[1] rounded-[8px] ">
+                      Previous
+                    </button>
                   </Link>
                   <Link to="/brokeradditionalinfo">
                     <button className="w-[204px] h-[52px] text-[#fff] text-[16px] tracking-[0.26px] font-[600]  bg-[#50B848] opacity-[1] rounded-[8px] ">Next</button>

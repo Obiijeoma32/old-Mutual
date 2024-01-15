@@ -14,8 +14,10 @@ export default function SelectInput({ label, placeholder }) {
 
           control: (baseStyles) => ({
             ...baseStyles,
-            color: "#ccccc",
-            fontSize: "14px",
+            color: "#cccccc",
+
+            letterSpacing: "0.54px",
+            fontSize: "16px",
             height: "52px",
             outline: "none",
             border: "0.5px solid #9C9898",
