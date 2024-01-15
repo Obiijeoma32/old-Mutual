@@ -25,7 +25,7 @@ import PaymentDashboard from "./Components/Payment/PaymentDashboard";
 import PolicyReports from "./Components/Reports/PolicyReports";
 import ClaimReports from "./Components/Reports/ClaimReports";
 import SetNewPassword from "./Components/SetNewPassword";
-import BrokerProfile from "./Components/BrokerProfile";
+import BrokerProfile from "./Components/BrokerProfile/BrokerProfile";
 import "./App.css";
 import IndividualGetQuote from "./Components/Get a Quote/IndividualGetQuote";
 import CorporateGetQuote from "./Components/Get a Quote/CorporateGetQuote";
@@ -33,6 +33,8 @@ import GroupLifeCorporateGetQuote from "./Components/Get a Quote/GroupLifeCorpor
 import MotorInsurancePrivate from "./Components/Get a Quote/MotorInsurancePrivate";
 import MarineCago from "./Components/Get a Quote/MarineCago";
 import FireandSpecialPerilQuote from "./Components/Get a Quote/FireandSpecialPerilQuote";
+import ManageUser from "./Components/BrokerProfile/ManageUser";
+import AddNewUser from "./Components/BrokerProfile/AddNewUser";
 
 function App() {
   return (
@@ -67,6 +69,8 @@ function App() {
           <Route path="/policyreport" element={<PolicyReports />} />
           <Route path="/claimreport" element={<ClaimReports />} />
           <Route path="/brokerprofile" element={<BrokerProfile />} />
+          <Route path="/manageuser" element={<ManageUser />} />
+          <Route path="/addnewuser" element={<AddNewUser />} />
           <Route path="/individualgetquote" element={<IndividualGetQuote />} />
           <Route path="/corporategetquote" element={<CorporateGetQuote />} />
           <Route path="/grouplifecorporategetquote" element={<GroupLifeCorporateGetQuote />} />

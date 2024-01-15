@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import SideMenu from "./SideMenu";
-import avatar from "./images/avatar.png";
+import SideMenu from "../SideMenu";
+import avatar from "../images/avatar.png";
 import { Link } from "react-router-dom";
+import DropDown from "../ProfileDropdown/DropDown";
+import Footer from "../Footer";
 
 function BrokerProfile() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  const time = new Date().getFullYear();
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 50;
@@ -27,7 +29,7 @@ function BrokerProfile() {
   return (
     <>
       <SideMenu />
-      <div className=" sm:pl-[30px] lg:pl-[23rem] h-[150vh] bg-white  w-[100%]">
+      <div className=" sm:pl-[30px] lg:pl-[23rem] h-fit pb-[40px] bg-white  w-[100%]">
         {/* notification container */}
         <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
           <div className=" justify-between flex items-center">
@@ -168,27 +170,10 @@ function BrokerProfile() {
           </div>
         </div>
         {/* Footer */}
-        <div className=" flex justify-between w-[85%] items-center mt-[70px]  ">
-          <h3 className="text-[#009677] font-semibold ">Broker Platform © -{time} </h3> <h3 className="text-[#009677] font-semibold ">Nubeero</h3>
-        </div>
+        <Footer />
       </div>
       {/* Dropdown menu bar */}
-      {isOpen && (
-        <div className=" w-[190px] sm:left-[50rem] absolute pl-[15px] pb-[15px] pt-[15px] pr-[15px] lg:left-[67rem] top-[4.5rem] h-[230px] bg-white border-[0.5px] border-[#AFAFAF] rounded-[2px] opacity-1 ">
-          <ul className=" flex flex-col h-[100%] justify-between text-left ">
-            <li className="text-[16px] border-b-[0.5px] pb-[5px] border-b-[#AFAFAF] font-semibold text-[#1A1A1AB8] tracking-[0.26px] opacity-[1]  ">My Profile</li>
-            <li className="text-[16px] font-semibold  border-b-[0.5px] pb-[5px] border-b-[#AFAFAF] text-[#1A1A1AB8] tracking-[0.26px] opacity-[1]  ">Manage Users</li>
-            <li className="text-[16px] font-semibold  border-b-[0.5px] pb-[5px] border-b-[#AFAFAF] text-[#1A1A1AB8] tracking-[0.26px] opacity-[1]  ">Add New User</li>
-            <li className="text-[16px] flex justify-between font-semibold  border-b-[0.5px] pb-[5px] border-b-[#AFAFAF] text-[#1A1A1AB8] tracking-[0.26px] opacity-[1]  ">
-              Messages
-              <div className="w-[24px] h-[24px] rounded-[30px] bg-[#50B848] flex justify-center items-center text-center ">
-                <h3 className=" text-[#fff] text-[10px] ">1</h3>
-              </div>
-            </li>
-            <li className="text-[16px] font-semibold text-[#1A1A1AB8] tracking-[0.26px] opacity-[1]  ">Sign Out</li>
-          </ul>
-        </div>
-      )}
+      {isOpen && <DropDown />}
       {/* Modal 1 */}
       {modalOpen && (
         <div onClick={() => setModalOpen(false)} className=" top-0 left-0 z-[2] flex justify-center items-center bg-[#767171] fixed bg-opacity-[54%] w-[100%] h-[100vh]  ">
