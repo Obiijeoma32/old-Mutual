@@ -10,6 +10,7 @@ function CreditLife() {
   const [creditCorporate, setCreditCorporate] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
+  const time = new Date().getFullYear();
   const handleCreditIndividual = () => {
     setCreditIndividual(true);
     setCreditCorporate(false);
@@ -22,7 +23,7 @@ function CreditLife() {
     <>
       <SideMenu />
       {/* LARGE SCREENS */}
-      <div className=" mobile:hidden lg:block pl-[23rem] h-[150vh]   w-[100%]">
+      <div className=" mobile:hidden lg:block pl-[23rem] pr-[40px] h-fit pb-[50px] 2xl:max-w-[90%]   w-[100%]">
         {/* notification container */}
         <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
           <div className=" justify-between flex items-center">
@@ -67,7 +68,7 @@ function CreditLife() {
             <p className="text-[18px] font-normal mt-[8px] text-[#1A1A1A] ">Quotes and Booking for Credit Life Insurance</p>
           </div>
         </div>
-        <div className=" w-[95%] h-[700px] pl-[25px] pt-[37px] rounded-[8px] mt-[44px] bg-white ">
+        <div className=" w-full h-[700px] pl-[25px] pt-[37px] rounded-[8px] mt-[44px] bg-white ">
           {/* Credit Life Individual and Corporate Insurance Header Container */}
           <div className="w-[98%]  border-b-[#DFDEDE]  border-b-[2px] rounded-[8] ">
             <div className=" w-[380px] flex justify-between items-center  ">
@@ -97,6 +98,10 @@ function CreditLife() {
           {/* Credit Life Individual and Corporate Insurance Table */}
           {creditIndividual && <CreditLifeIndividual setIsHovered={setIsHovered} />}
           {creditCorporate && <CreditLifeCorporate setIsHovered={setIsHovered} />}
+        </div>
+        {/* Footer */}
+        <div className=" flex justify-end items-center mt-[70px] pr-[20px] ">
+          <h3 className="text-[#009677] font-semibold ">OldMutual Broker Platform © -{time}Nubeero</h3>
         </div>
       </div>
       {/* SMALL SCREENS */}
@@ -176,6 +181,10 @@ function CreditLife() {
             {creditIndividual && <CreditLifeIndividual setIsHovered={setIsHovered} />}
             {creditCorporate && <CreditLifeCorporate setIsHovered={setIsHovered} />}
           </div>
+        </div>
+        {/* Footer */}
+        <div className=" flex justify-end items-center mt-[70px] pr-[20px] ">
+          <h3 className="text-[#009677] font-semibold ">OldMutual Broker Platform © -{time}Nubeero</h3>
         </div>
       </div>
       {/* Book Box */}

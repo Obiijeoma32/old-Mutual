@@ -19,8 +19,8 @@ function DirectorInfo() {
             <div className=" w-[210px] ml-[-20px] mb-[32px] h-[47px] ">
               <img src={logo} alt="logo" />
             </div>
-            <h1 className="text-[44px] w-[600px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
-            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[24px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
+            <h1 className="text-[30px]  tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
+            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[18px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
             <div className=" mt-[45px] h-[200px] ">
               <form>
                 {options.map((option) => (
@@ -34,10 +34,10 @@ function DirectorInfo() {
           </div>
           {/* Form starts */}
           <div className=" w-[45%]">
-            <div className=" w-[504px] z-[2] relative  pt-[37px] pl-[32px] h-[573px] bg-white rounded-[16px] ">
+            <div className=" w-[504px] z-[2] relative  pt-[37px] pl-[32px] h-fit pb-[50px] bg-white rounded-[16px] ">
               <div>
-                <h3 className="text-[44px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
-                <p className=" tracking-[0.88px] w-[440px] mt-[37px] text-[#282828] font-[300] text-[20px] text-left opacity-[1] ">Kindly provide the details below to create a Broker Profile</p>
+                <h3 className="text-[30px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
+                <p className=" tracking-[0.88px] w-[440px] mt-[37px] text-[#282828] font-[300] text-[18px] text-left opacity-[1] ">Kindly provide the details below to create a Broker Profile</p>
                 <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="First Name" />
                 <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="Last Name" />
 
@@ -60,14 +60,14 @@ function DirectorInfo() {
             </div>
           </div>
         </div>
-        <img className=" z-[1] absolute top-[36.5rem] right-[30rem] " src={leaf} alt="leaf" />
+        <img className=" z-[1] absolute top-[35rem] right-[30rem] " src={leaf} alt="leaf" />
         <div className=" w-[499px] ml-[44rem] ">
           <p className=" mt-[px] text-left text-[16px] tracking-[0.26px] opacity-[1] text-[#808285] font-normal ">
             By clicking on sign in button, you agree to our <span className="text-[#009677]">terms of use & privacy policy</span>{" "}
           </p>
         </div>
-        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[150px] pb-[100px]">
-          <p className=" text-[24px] font-normal text-[#2E3D56CC]">
+        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[50px] pb-[100px]">
+          <p className=" text-[18px] font-normal text-[#2E3D56CC]">
             Having troubles? <span className="text-[#009677] font-bold underline ">Contact Support</span>
           </p>
         </div>

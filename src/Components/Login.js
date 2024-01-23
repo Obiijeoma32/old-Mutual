@@ -21,18 +21,18 @@ function Login() {
             <div className=" w-[210px] ml-[-20px] mb-[32px] h-[47px] ">
               <img src={logo} alt="logo" />
             </div>
-            <h1 className="text-[44px] w-[600px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
-            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[24px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
+            <h1 className="text-[30px]  tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
+            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[18px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
           </div>
           {/* Form starts */}
           <div className="   w-[45%]">
-            <div className=" w-[504px] z-[2] relative  pt-[37px] pl-[32px] h-[693px] bg-white rounded-[16px] ">
+            <div className=" w-[430px] z-[2] relative  pt-[37px] pl-[32px] h-fit pb-[50px] bg-white rounded-[16px] ">
               <div>
-                <h3 className="text-[44px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Sign In</h3>
-                <p className=" tracking-[0.88px] mt-[37px] text-[#282828] font-[300] text-[20px] text-left opacity-[1] ">Kindly Provide your registered details to access your dashboard.</p>
-                <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="Username" />
-                <div className=" font-medium w-[440px] items-center flex justify-between h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pr-[24px] rounded-[4px] opacity-[1] border-[#9C9898] ">
-                  <input className="w-[385px] pl-[24px] h-[46px] outline-none " type={inputType} placeholder="Password" />
+                <h3 className="text-[28px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Sign In</h3>
+                <p className=" tracking-[0.88px] mt-[20px] text-[#282828] font-[300] text-[18px] text-left opacity-[1] ">Kindly Provide your registered details to access your dashboard.</p>
+                <input className=" outline-none font-medium w-[350px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="Username" />
+                <div className=" font-medium w-[350px] items-center flex justify-between h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pr-[24px] rounded-[4px] opacity-[1] border-[#9C9898] ">
+                  <input className="w-[95%] pl-[24px] h-[46px] outline-none " type={inputType} placeholder="Password" />
                   <span onClick={togglePasswordVisibility} style={{ cursor: "pointer" }}>
                     {showPassword ? (
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@ function Login() {
                   <div className="text-[16px]  mt-[35px]  text-[#009677] font-medium  ">Remember Me</div>
                 </div>
                 <Link onClick={() => window.scroll(0, 0)} to="/dashboard">
-                  <button className="w-[440px] h-[52px] text-[#fff] text-[16px] tracking-[0.26px] font-[600] mt-[44px] bg-[#50B848] opacity-[1] rounded-[4px] ">Sign In</button>
+                  <button className="w-[350px] h-[52px] text-[#fff] text-[16px] tracking-[0.26px] font-[600] mt-[44px] bg-[#50B848] opacity-[1] rounded-[4px] ">Sign In</button>
                 </Link>
                 <p className=" mt-[24px] text-center text-[16px] tracking-[0.26px] opacity-[1] text-[#808285] font-normal ">
                   Don't have an account?
@@ -72,14 +72,14 @@ function Login() {
             </div>
           </div>
         </div>
-        <img className=" z-[1] absolute top-[42.5rem] right-[38%] " src={leaf} alt="leaf" />
-        <div className=" w-[499px] ml-[44rem] ">
-          <p className=" mt-[px] text-left text-[16px] tracking-[0.26px] opacity-[1] text-[#808285] font-normal ">
+        <img className=" z-[1] absolute top-[40.5rem] right-[38%] " src={leaf} alt="leaf" />
+        <div className=" w-[350px] float-right mr-[190px] ">
+          <p className="  text-left text-[14px] tracking-[0.26px] opacity-[1] text-[#808285] font-normal ">
             By clicking on sign in button, you agree to our <span className="text-[#009677]">terms of use & privacy policy</span>{" "}
           </p>
         </div>
-        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[150px] pb-[100px]">
-          <p className=" text-[24px] font-normal text-[#2E3D56CC]">
+        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[50px] pb-[100px]">
+          <p className=" text-[18px] font-normal text-[#2E3D56CC]">
             Having troubles? <span className="text-[#009677] font-bold underline ">Contact Support</span>
           </p>
         </div>

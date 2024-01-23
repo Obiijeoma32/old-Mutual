@@ -15,12 +15,12 @@ function BrokerAdditionalInfo() {
       <div className="mobile:hidden lg:block ">
         <div className=" w-[100%] p-[90px] flex justify-between items-center ">
           {/* Welcome Note */}
-          <div className=" h-[1290px]  w-[45%]  ">
+          <div className=" h-[1290px]  w-[43%]  ">
             <div className=" w-[210px] ml-[-20px] mb-[32px] h-[47px] ">
               <img src={logo} alt="logo" />
             </div>
-            <h1 className="text-[44px] w-[600px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
-            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[24px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
+            <h1 className="text-[30px]  tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
+            <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[18px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
             <div className=" mt-[45px] h-[500px] ">
               <form>
                 {options.map((option) => (
@@ -33,11 +33,11 @@ function BrokerAdditionalInfo() {
             </div>
           </div>
           {/* Form starts */}
-          <div className=" w-[45%]">
-            <div className=" w-[504px] z-[2] relative  pt-[37px] pl-[32px] h-[1190px] bg-white rounded-[16px] ">
+          <div className=" w-[43%]">
+            <div className=" w-[504px] z-[2] relative  pt-[37px] pl-[32px] h-fit pb-[50px] bg-white rounded-[16px] ">
               <div>
-                <h3 className="text-[44px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
-                <p className=" tracking-[0.88px] w-[440px] mt-[37px] text-[#282828] font-[300] text-[20px] text-left opacity-[1] ">Kindly provide the details below to create a Broker Profile</p>
+                <h3 className="text-[30px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
+                <p className=" tracking-[0.88px]  mt-[37px] text-[#282828] font-[300] text-[18px] text-left opacity-[1] ">Kindly provide the details below to create a Broker Profile</p>
                 <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="Office Address" />
                 <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="City/Town" />
                 <input className=" outline-none font-medium w-[440px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="State" />
@@ -78,10 +78,10 @@ function BrokerAdditionalInfo() {
             </div>
           </div>
         </div>
-        <img className=" z-[1] absolute top-[77rem] right-[30rem] " src={leaf} alt="leaf" />
+        <img className=" z-[1] absolute top-[75rem] right-[30rem] " src={leaf} alt="leaf" />
 
-        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[150px] pb-[100px]">
-          <p className=" text-[24px] font-normal text-[#2E3D56CC]">
+        <div className=" pl-[70px] tracking-[0.38px] opacity-[1] mt-[10px] pb-[100px]">
+          <p className=" text-[18px] font-normal text-[#2E3D56CC]">
             Having troubles? <span className="text-[#009677] font-bold underline ">Contact Support</span>
           </p>
         </div>

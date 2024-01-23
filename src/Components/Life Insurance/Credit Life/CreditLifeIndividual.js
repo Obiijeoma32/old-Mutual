@@ -17,7 +17,7 @@ export default function CreditLifeIndividual({ setIsHovered }) {
           </thead>
           <tbody className=" text-[16px] font-normal  text-[#575757] bg-[#FAFAFA] w-full h-[355px]  ">
             <tr className="  ">
-              <td className="w-[30%] pt-[20px] border-r-[1px] pr-[15px] pl-[15px]  border-r-[#E4E7ED] ">
+              <td className="w-[30%] 3xl:pt-[0] lg:pt-[20px] border-r-[1px] pr-[15px] pl-[15px]  border-r-[#E4E7ED] ">
                 Credit life insurance is insurance that provides security should you be unable to repay your debt due to retrenchment, disability or death.
                 <br />
                 <span className="text-[#1A987B]">

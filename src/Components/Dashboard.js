@@ -245,9 +245,9 @@ function Dashboard() {
   return (
     <>
       {/* LARGE SCREENS */}
-      <div className=" mobile:hidden lg:block ">
+      <div className=" mobile:hidden lg:block w-full bg-white ">
         <SideMenu />
-        <div className="pl-[23rem]  h-fit pb-[50px] bg-white 4xl:max-w-[98%]  w-[100%]">
+        <div className="3xl:pl-[30rem] lg:pl-[23rem] h-fit pb-[50px] bg-white 3xl:max-w-[85%]  w-[100%]">
           {/* notification container */}
           <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
             <div className=" justify-between flex items-center">
@@ -347,10 +347,10 @@ function Dashboard() {
             )}
           </div>
           {/* Second line Boxes Starts Here */}
-          <div className=" mt-[44px] flex justify-between w-[98%]  items-center ">
+          <div className=" mt-[44px] flex flex-wrap justify-between lg:w-[98%]  gap-[40px]  items-center ">
             {/* Box 1 */}
             <Link className=" text-[18px] text-[#808285] font-normal   " to="">
-              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[630px] 4xl:w-[720px]  rounded-[12px] opacity-[1] h-[138px] ">
+              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[400px]   rounded-[12px] opacity-[1] h-[138px] ">
                 <div>
                   <h3 className="text-[18px] font-normal text-[#1a1a1a] ">Policies</h3>
                   <h2 className="text-[32px] tracking-[0.64px] font-bold text-[#1a1a1a] ">0</h2>
@@ -375,7 +375,7 @@ function Dashboard() {
             </Link>
             {/* Box 2 */}
             <Link className=" text-[18px] text-[#808285] font-normal   " to="">
-              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[630px] 4xl:w-[720px]  rounded-[12px] opacity-[1] h-[138px] ">
+              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[400px]  rounded-[12px] opacity-[1] h-[138px] ">
                 <div>
                   <h3 className="text-[18px] font-normal text-[#1a1a1a] ">Claims</h3>
                   <h2 className="text-[32px] tracking-[0.64px] font-bold text-[#1a1a1a] ">0</h2>
@@ -393,12 +393,10 @@ function Dashboard() {
                 </div>
               </div>
             </Link>
-          </div>
-          {/* Third line */}
-          <div className="  mt-[44px]   flex justify-between  lg:w-[98%]  items-center ">
+
             {/* Box 3 */}
             <Link className=" text-[18px] text-[#808285] font-normal   " to="">
-              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[630px] 4xl:w-[720px]   rounded-[12px] opacity-[1] h-[138px] ">
+              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[400px]    rounded-[12px] opacity-[1] h-[138px] ">
                 <div>
                   <h3 className="text-[18px] font-normal text-[#1a1a1a] ">Renewals</h3>
                   <h2 className="text-[32px] tracking-[0.64px] font-bold text-[#1a1a1a] ">0</h2>
@@ -413,7 +411,7 @@ function Dashboard() {
             </Link>
             {/* Box 4 */}
             <Link className=" text-[18px] text-[#808285] font-normal   " to="">
-              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[630px]  4xl:w-[720px]  rounded-[12px] opacity-[1] h-[138px] ">
+              <div className=" border-[#AFAFAF]  flex justify-between pr-[32px] pl-[32px] items-center border-[0.5px] lg:w-[420px] 2xl:w-[550px] 3xl:w-[400px]   rounded-[12px] opacity-[1] h-[138px] ">
                 <div>
                   <h3 className="text-[18px] font-normal text-[#1a1a1a] ">Quotes</h3>
                   <h2 className="text-[32px] tracking-[0.64px] font-bold text-[#1a1a1a] ">8</h2>
@@ -430,198 +428,200 @@ function Dashboard() {
               </div>
             </Link>
           </div>
-          {/* Quote Table */}
-          <div className=" w-[98%] p-[32px] h-[650px] mt-[40px] border-[#AFAFAF] border-[0.5px] rounded-[12px] opacity-[1]">
-            {/* Title container */}
-            <div className="flex justify-between items-center ">
-              <h2 className="text-[20px] text-[#1a1a1a] font-bold tracking-[0.4px] opacity-[1] text-center  ">Quote</h2>
-              <span>
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.4483 10.8763L10.4483 10.0963C10.7783 10.0063 10.9883 9.67628 10.8983 9.31628C10.8083 8.98628 10.4783 8.77628 10.1183 8.86628L8.5583 9.28628C9.0683 8.62628 9.7283 8.08628 10.5383 7.72628C11.7683 7.18628 13.1183 7.15628 14.3783 7.63628C15.6083 8.11628 16.5983 9.07628 17.1383 10.2763C17.2883 10.6063 17.6483 10.7263 17.9783 10.6063C18.3083 10.4563 18.4283 10.0963 18.3083 9.76628C17.6483 8.23628 16.4183 7.06628 14.8583 6.43628C13.2983 5.83628 11.5883 5.86628 10.0583 6.52628C9.0383 6.97628 8.1983 7.66628 7.5383 8.53628L7.1483 7.06628C7.0583 6.73628 6.7283 6.52628 6.3683 6.61628C6.0383 6.70628 5.8283 7.03628 5.9183 7.39628L6.6983 10.3963C6.7883 10.8163 6.9983 10.9963 7.4483 10.8763ZM19.1783 17.2363L18.3983 14.2663C18.3983 14.2663 18.2783 13.6663 17.6783 13.8163L14.6783 14.5963C14.3483 14.6863 14.1383 15.0163 14.2283 15.3763C14.3183 15.7063 14.6483 15.9163 15.0083 15.8263L16.5683 15.4063C15.2483 17.1463 12.9083 17.8663 10.7783 17.0263C9.5483 16.5463 8.5583 15.5863 8.0183 14.3863C7.8683 14.0563 7.5083 13.9363 7.1783 14.0563C6.8483 14.2063 6.7283 14.5663 6.8483 14.8963C7.5083 16.4263 8.7383 17.5963 10.2983 18.2263C11.0483 18.5263 11.7983 18.6463 12.5783 18.6463C14.5583 18.6463 16.4183 17.7163 17.6183 16.0963L18.0083 17.5663C18.0683 17.8363 18.3383 18.0463 18.6083 18.0463C18.6683 18.0463 18.7283 18.0463 18.7583 18.0163C19.0583 17.8963 19.2683 17.5663 19.1783 17.2363Z"
-                    fill="#1a1a1a"
-                  />
-                </svg>
-              </span>
+          <div className=" w-full flex justify-between items-center gap-[50px] flex-wrap ">
+            {/* Quote Table */}
+            <div className=" w-[98%] p-[32px] h-[650px] mt-[40px] border-[#AFAFAF] border-[0.5px] rounded-[12px] opacity-[1]">
+              {/* Title container */}
+              <div className="flex justify-between items-center ">
+                <h2 className="text-[20px] text-[#1a1a1a] font-bold tracking-[0.4px] opacity-[1] text-center  ">Quote</h2>
+                <span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.4483 10.8763L10.4483 10.0963C10.7783 10.0063 10.9883 9.67628 10.8983 9.31628C10.8083 8.98628 10.4783 8.77628 10.1183 8.86628L8.5583 9.28628C9.0683 8.62628 9.7283 8.08628 10.5383 7.72628C11.7683 7.18628 13.1183 7.15628 14.3783 7.63628C15.6083 8.11628 16.5983 9.07628 17.1383 10.2763C17.2883 10.6063 17.6483 10.7263 17.9783 10.6063C18.3083 10.4563 18.4283 10.0963 18.3083 9.76628C17.6483 8.23628 16.4183 7.06628 14.8583 6.43628C13.2983 5.83628 11.5883 5.86628 10.0583 6.52628C9.0383 6.97628 8.1983 7.66628 7.5383 8.53628L7.1483 7.06628C7.0583 6.73628 6.7283 6.52628 6.3683 6.61628C6.0383 6.70628 5.8283 7.03628 5.9183 7.39628L6.6983 10.3963C6.7883 10.8163 6.9983 10.9963 7.4483 10.8763ZM19.1783 17.2363L18.3983 14.2663C18.3983 14.2663 18.2783 13.6663 17.6783 13.8163L14.6783 14.5963C14.3483 14.6863 14.1383 15.0163 14.2283 15.3763C14.3183 15.7063 14.6483 15.9163 15.0083 15.8263L16.5683 15.4063C15.2483 17.1463 12.9083 17.8663 10.7783 17.0263C9.5483 16.5463 8.5583 15.5863 8.0183 14.3863C7.8683 14.0563 7.5083 13.9363 7.1783 14.0563C6.8483 14.2063 6.7283 14.5663 6.8483 14.8963C7.5083 16.4263 8.7383 17.5963 10.2983 18.2263C11.0483 18.5263 11.7983 18.6463 12.5783 18.6463C14.5583 18.6463 16.4183 17.7163 17.6183 16.0963L18.0083 17.5663C18.0683 17.8363 18.3383 18.0463 18.6083 18.0463C18.6683 18.0463 18.7283 18.0463 18.7583 18.0163C19.0583 17.8963 19.2683 17.5663 19.1783 17.2363Z"
+                      fill="#1a1a1a"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div className="mt-[24px]">
+                <table className="w-[100%] h-auto ">
+                  <thead>
+                    <tr className=" justify-between  items-center h-[32px] bg-[#F0F0F0] rounded-[4px] ">
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Date</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Quote ID</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Insured Name</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Product</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Status</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  "> Amount Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
+                      <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-            <div className="mt-[24px]">
-              <table className="w-[100%] h-auto ">
-                <thead>
-                  <tr className=" justify-between  items-center h-[32px] bg-[#F0F0F0] rounded-[4px] ">
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Date</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Quote ID</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Insured Name</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Product</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Status</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  "> Amount Value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-2  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-2 opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">APPROVED</td>
-                    <td className="text-[16px] font-normal p-2  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          {/* Claims Table */}
-          <div className=" w-[98%] p-[32px] h-[450px] mt-[40px] border-[#AFAFAF] border-[0.5px] rounded-[12px] opacity-[1]">
-            {/* Title container */}
-            <div className="flex justify-between items-center ">
-              <h2 className="text-[20px] text-[#1a1a1a] font-bold tracking-[0.4px] opacity-[1] text-center  ">Claims</h2>
-              <span>
-                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.4483 10.8763L10.4483 10.0963C10.7783 10.0063 10.9883 9.67628 10.8983 9.31628C10.8083 8.98628 10.4783 8.77628 10.1183 8.86628L8.5583 9.28628C9.0683 8.62628 9.7283 8.08628 10.5383 7.72628C11.7683 7.18628 13.1183 7.15628 14.3783 7.63628C15.6083 8.11628 16.5983 9.07628 17.1383 10.2763C17.2883 10.6063 17.6483 10.7263 17.9783 10.6063C18.3083 10.4563 18.4283 10.0963 18.3083 9.76628C17.6483 8.23628 16.4183 7.06628 14.8583 6.43628C13.2983 5.83628 11.5883 5.86628 10.0583 6.52628C9.0383 6.97628 8.1983 7.66628 7.5383 8.53628L7.1483 7.06628C7.0583 6.73628 6.7283 6.52628 6.3683 6.61628C6.0383 6.70628 5.8283 7.03628 5.9183 7.39628L6.6983 10.3963C6.7883 10.8163 6.9983 10.9963 7.4483 10.8763ZM19.1783 17.2363L18.3983 14.2663C18.3983 14.2663 18.2783 13.6663 17.6783 13.8163L14.6783 14.5963C14.3483 14.6863 14.1383 15.0163 14.2283 15.3763C14.3183 15.7063 14.6483 15.9163 15.0083 15.8263L16.5683 15.4063C15.2483 17.1463 12.9083 17.8663 10.7783 17.0263C9.5483 16.5463 8.5583 15.5863 8.0183 14.3863C7.8683 14.0563 7.5083 13.9363 7.1783 14.0563C6.8483 14.2063 6.7283 14.5663 6.8483 14.8963C7.5083 16.4263 8.7383 17.5963 10.2983 18.2263C11.0483 18.5263 11.7983 18.6463 12.5783 18.6463C14.5583 18.6463 16.4183 17.7163 17.6183 16.0963L18.0083 17.5663C18.0683 17.8363 18.3383 18.0463 18.6083 18.0463C18.6683 18.0463 18.7283 18.0463 18.7583 18.0163C19.0583 17.8963 19.2683 17.5663 19.1783 17.2363Z"
-                    fill="#1a1a1a"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div className="mt-[24px]">
-              <table className="w-[100%] h-auto ">
-                <thead>
-                  <tr className=" justify-between  items-center h-[32px] bg-[#F0F0F0] rounded-[4px] ">
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Entry Date</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Product</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Policy ID</th>
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Claim Amount</th>
+            {/* Claims Table */}
+            <div className=" w-[98%] p-[32px] h-[450px]  border-[#AFAFAF] border-[0.5px] rounded-[12px] opacity-[1]">
+              {/* Title container */}
+              <div className="flex justify-between items-center ">
+                <h2 className="text-[20px] text-[#1a1a1a] font-bold tracking-[0.4px] opacity-[1] text-center  ">Claims</h2>
+                <span>
+                  <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.4483 10.8763L10.4483 10.0963C10.7783 10.0063 10.9883 9.67628 10.8983 9.31628C10.8083 8.98628 10.4783 8.77628 10.1183 8.86628L8.5583 9.28628C9.0683 8.62628 9.7283 8.08628 10.5383 7.72628C11.7683 7.18628 13.1183 7.15628 14.3783 7.63628C15.6083 8.11628 16.5983 9.07628 17.1383 10.2763C17.2883 10.6063 17.6483 10.7263 17.9783 10.6063C18.3083 10.4563 18.4283 10.0963 18.3083 9.76628C17.6483 8.23628 16.4183 7.06628 14.8583 6.43628C13.2983 5.83628 11.5883 5.86628 10.0583 6.52628C9.0383 6.97628 8.1983 7.66628 7.5383 8.53628L7.1483 7.06628C7.0583 6.73628 6.7283 6.52628 6.3683 6.61628C6.0383 6.70628 5.8283 7.03628 5.9183 7.39628L6.6983 10.3963C6.7883 10.8163 6.9983 10.9963 7.4483 10.8763ZM19.1783 17.2363L18.3983 14.2663C18.3983 14.2663 18.2783 13.6663 17.6783 13.8163L14.6783 14.5963C14.3483 14.6863 14.1383 15.0163 14.2283 15.3763C14.3183 15.7063 14.6483 15.9163 15.0083 15.8263L16.5683 15.4063C15.2483 17.1463 12.9083 17.8663 10.7783 17.0263C9.5483 16.5463 8.5583 15.5863 8.0183 14.3863C7.8683 14.0563 7.5083 13.9363 7.1783 14.0563C6.8483 14.2063 6.7283 14.5663 6.8483 14.8963C7.5083 16.4263 8.7383 17.5963 10.2983 18.2263C11.0483 18.5263 11.7983 18.6463 12.5783 18.6463C14.5583 18.6463 16.4183 17.7163 17.6183 16.0963L18.0083 17.5663C18.0683 17.8363 18.3383 18.0463 18.6083 18.0463C18.6683 18.0463 18.7283 18.0463 18.7583 18.0163C19.0583 17.8963 19.2683 17.5663 19.1783 17.2363Z"
+                      fill="#1a1a1a"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div className="mt-[24px]">
+                <table className="w-[100%] h-auto ">
+                  <thead>
+                    <tr className=" justify-between  items-center h-[32px] bg-[#F0F0F0] rounded-[4px] ">
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Entry Date</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Product</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Policy ID</th>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  ">Claim Amount</th>
 
-                    <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  "> Amount </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <th className="text-[14px] tracking-[0.24px] font-bold text-[#1A1A1A8A]  "> Amount </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
 
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
 
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
 
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                  <tr className=" justify-between items-center w-[100%] ">
-                    <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
-                      2023-11-22
-                      <span>11:14:50.84</span>
-                    </td>
-                    <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                    <tr className=" justify-between items-center w-[100%] ">
+                      <td className="text-[16px] p-[15px]  flex flex-col font-normal opacity-[1] text-[#1a1a1a]  ">
+                        2023-11-22
+                        <span>11:14:50.84</span>
+                      </td>
+                      <td className="text-[16px] font-normal p-[15px] opacity-[1] text-[#1a1a1a]  ">101427967</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">Cotton Carey Trading</td>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">GROUPLIFECORP</td>
 
-                    <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
-                  </tr>
-                </tbody>
-              </table>
+                      <td className="text-[16px] font-normal p-[15px]  opacity-[1] text-[#1a1a1a]  ">₦1,950.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
           {/* Footer */}
@@ -1020,7 +1020,7 @@ function Dashboard() {
       {quickquotes && (
         <>
           {/* LARGE SCREENS */}
-          <div className=" mobile:hidden lg:block top-0 left-0 z-[2] flex justify-center items-center bg-[#767171] fixed bg-opacity-[54%] w-[100%] h-full  ">
+          <div className=" mobile:hidden lg:flex top-0 left-0 z-[2] flex justify-center items-center bg-[#767171] fixed bg-opacity-[54%] w-[100%] h-full  ">
             <div className="w-[650px] h-fit rounded-[8px]   bg-white opacity-[1]  ">
               <div className=" w-[100%] p-[20px] h-[70px] flex justify-between items-center bg-[#039677] text-[20px]  text-[#fff] ">
                 <h3 className=" font-normal ">Insurance Quotes</h3>

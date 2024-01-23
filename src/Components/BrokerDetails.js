@@ -45,7 +45,7 @@ function BrokerDetails() {
             <div className=" w-[210px] ml-[-20px] mb-[32px] h-[47px] ">
               <img src={logo} alt="logo" />
             </div>
-            <h1 className="text-[34px] w-[600px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
+            <h1 className="text-[30px] w-[95%] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Guaranteed Insurance for individuals and Organization</h1>
             <p className=" tracking-[1.06px] mt-[32px] text-[#808285] font-normal text-[20px] text-left opacity-[1] ">OldMutual aims to offer the best type of insurance cover that meets your needs.</p>
             <div className=" mt-[45px] h-[500px] ">
               <form>
@@ -67,7 +67,7 @@ function BrokerDetails() {
 
             <div className=" w-[480px] z-[2] relative  pt-[37px] pl-[32px] h-fit pb-[50px] bg-white rounded-[16px] ">
               <div>
-                <h3 className="text-[34px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
+                <h3 className="text-[30px] tracking-[1.94px] opacity-[1] font-bold text-[#009677] ">Get Started</h3>
                 <p className=" tracking-[0.88px]  mt-[37px] text-[#282828] font-[300] text-[18px] text-left opacity-[1] ">Kindly provide the details below to create a Broker Profile</p>
                 <input className=" outline-none font-medium w-[400px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="CAC RC No" />
                 <input className=" outline-none font-medium w-[400px] h-[52px] border-[0.5px] mt-[32px] text-[16px] text-[#9C9898]  pl-[24px] rounded-[4px] opacity-[1] border-[#9C9898] " type="text" placeholder="Broker ID (RB No)" />

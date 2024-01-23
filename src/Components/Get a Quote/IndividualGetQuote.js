@@ -162,7 +162,7 @@ export default function IndividualGetQuote() {
     <>
       <SideMenu />
       {/* LARGE SCREENS */}
-      <div className=" lg:block mobile:hidden pl-[22rem]  h-fit pb-[50px]   w-full">
+      <div className=" lg:block mobile:hidden pl-[23rem]  h-fit pb-[50px] 3xl:max-w-[90%]   w-full">
         {/* notification container */}
         <div className="flex w-[100%] pr-[10px]  h-[50px] pt-[40px] justify-end items-center">
           <div className=" justify-between flex items-center">
